@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.dashboardRouter = void 0;
+const express_1 = require("express");
+const dashboardController_1 = require("../controllers/dashboardController");
+exports.dashboardRouter = (0, express_1.Router)();
+exports.dashboardRouter.get("/", dashboardController_1.getDashboard);
+exports.dashboardRouter.patch("/", dashboardController_1.patchDashboard);
+exports.dashboardRouter.patch("/speed", dashboardController_1.updateMotorSpeed);
+exports.dashboardRouter.patch("/charging", dashboardController_1.updateCharging);
