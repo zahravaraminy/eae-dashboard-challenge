@@ -1,6 +1,9 @@
 import { DashboardState } from "../types/DashboardState";
 
-const API_BASE_URL = "http://localhost:5000/api/dashboard";
+//const API_BASE_URL = "http://localhost:5000/api/dashboard";
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://eae-dashboard-challenge.onrender.com/api/dashboard";
 
 export const getDashboardState = async (): Promise<DashboardState> => {
   const response = await fetch(API_BASE_URL);
